@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open News App</title>
+<style>
+body { font-family: Arial; padding: 20px; }
+input, textarea { width: 100%; margin-bottom: 10px; padding: 8px; }
+button { padding: 10px; background: green; color: white; border: none; }
+</style>
+</head>
+<body>
+
+<h1>India Open News</h1>
+
+<input type="text" id="title" placeholder="News Title">
+<textarea id="desc" placeholder="News Description"></textarea>
+<input type="text" id="location" placeholder="Location">
+
+<button onclick="postNews()">Submit</button>
+
+<script>
+function postNews(){
+    let title = document.getElementById("title").value;
+    let desc = document.getElementById("desc").value;
+    let location = document.getElementById("location").value;
+
+    alert("News Submitted:\n\nTitle: " + title + "\n\nDescription: " + desc + "\n\nLocation: " + location);
+}
+</script>
+
+</body>
+</html>
