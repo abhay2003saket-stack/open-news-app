@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings - India Open News</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background-color: white;
+    }
+    .box {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>⚙ India Open News - Settings</h2>
+
+<div class="box">
+  <label>🌙 Dark Mode:</label>
+  <input type="checkbox" id="darkToggle">
+</div>
+
+<div class="box">
+  <label>📍 Default Location:</label>
+  <input type="text" id="locationInput" placeholder="Enter city name">
+</div>
+
+<div class="box">
+  <label>📰 News Category:</label>
+  <select id="categorySelect">
+    <option>General</option>
+    <option>Sports</option>
+    <option>Technology</option>
+    <option>Business</option>
+  </select>
+</div>
+
+<button onclick="saveSettings()">Save Settings</button>
+
+<script>
+function saveSettings() {
+  localStorage.setItem("darkMode", document.getElementById("darkToggle").checked);
+  localStorage.setItem("location", document.getElementById("locationInput").value);
+  localStorage.setItem("category", document.getElementById("categorySelect").value);
+  alert("Settings Saved!");
+}
+</script>
+
+</body>
+</html>
